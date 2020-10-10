@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('../static/img/home-bg.jpg')">
+  <div class=" overlay">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Admin Panel</h1>
+          <span class="subheading">Manage your posts and change them</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <h1> Basic Actions</h1>
+      <a href="/edit/0"><button class="btn btn-primary"> Add a new post</button></a>
+      <a href="/logout"><button class="btn btn-primary"> Logout</button></a>
+      <hr>
+      <h1> Upload A file</h1>
+      <form action="/uploader" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <hr>
+      <h1> Edit posts</h1>
+      <table class="container" style="border: 1px solid black;">
+        <thead>
+          <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">S_no</td>
+            <td style="border: 1px solid black;">Title</td>
+            <td style="border: 1px solid black;">Date</td>
+            <td style="border: 1px solid black;">Edit</td>
+            <td style="border: 1px solid black;">Delete</td>
+          </tr>
+        </thead>
+        <tbody>
+          {% for post in posts %}
+          <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;">{{post.s_no}}</td>
+            <td style="border: 1px solid black;">{{post.title}}</td>
+            <td style="border: 1px solid black;">{{post.date}}</td>
+            <td><a href="/edit/{{ post.s_no }}"><button class="btn btn-primary">Edit</button></a></td>
+            <td><a href="/delete/{{ post.s_no }}"><button class="btn btn-primary">Delete</button></a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% endblock %}

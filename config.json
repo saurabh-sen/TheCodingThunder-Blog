@@ -1,0 +1,17 @@
+{
+    "params": {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/codingthunder",
+        "prod_uri": "myswl://root:@localhost/codingthunder",
+        "facebook_url": "https://facebook.com/codingthunder",
+        "twitter_url": "https://twitter.com/codingthunder",
+        "github_url": "https://GitHub.com/codingthunder",
+        "gmail-user": "your_email@gmail.com",
+        "gmail-password": "your_password",
+        "about_text": "Hii my name is Saurabh and i love DJing and i am a big fan of DJ and Producer Alan Walker. I joined #WalkersJoin community and i am Walkers#56180",
+        "no_of_posts": 2,
+        "admin_user": "Saurabh",
+        "admin_password": "Jabalpur",
+        "upload_location": "E:\\Complete Web Development Bootcamp\\website_projects\\Blog_website_mySQL\\Blog_website_1\\mypackage\\static\\img"
+    }
+}

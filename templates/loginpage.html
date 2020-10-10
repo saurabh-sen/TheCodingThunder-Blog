@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/style.css')}}">
+    <title>animated login page</title>
+</head>
+
+<body>
+    <form class="box" action="/dashboard/" method="POST">
+        <h1>Admin Log In</h1>
+        <input type="text" name="uname" placeholder="Admin Username">
+        <input type="password" name="pass" placeholder="Password">
+        <input type="submit" name="submit" value="Login">
+    </form>
+</body>
+
+</html>
